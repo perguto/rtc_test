@@ -1,6 +1,8 @@
 const chatbox = document.getElementById('chat')
 
 // Both sides
+
+options = {}
 const pc = new RTCPeerConnection(options);
 const channel = pc.createDataChannel("chat", { negotiated: true, id: 0 });
 channel.onopen = (event) => {
